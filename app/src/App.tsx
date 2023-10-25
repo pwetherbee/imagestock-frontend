@@ -1,25 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Layout from "./components/Layout/Layout";
+import { Button, Container, Stack, TextField, Typography } from "@mui/material";
+import ImagesList from "./components/ImagesList";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Layout>
+      <div className="App">
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            minHeight: "100vh",
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Container>
+            <Stack sx={{}} spacing={2}>
+              <Typography variant="h1">ImgStock</Typography>
+              <TextField placeholder="Enter your prompt" />
+
+              <Stack direction={"row"} justifyContent={"center"} spacing={2}>
+                <Button variant="contained">Search</Button>
+                <Button variant="contained" color="secondary">
+                  Generate
+                </Button>
+              </Stack>
+            </Stack>
+          </Container>
+          <ImagesList />
+        </div>
+      </div>
+    </Layout>
   );
 }
 
