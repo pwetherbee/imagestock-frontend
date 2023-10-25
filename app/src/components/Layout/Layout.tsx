@@ -5,6 +5,25 @@ import React from "react";
 const theme = createTheme({
   palette: {
     mode: "dark",
+    primary: {
+      main: "#3f51b5",
+    },
+    secondary: {
+      main: "#7074c6",
+    },
+  },
+  shape: {
+    borderRadius: 10,
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: "none",
+          borderRadius: 15,
+        },
+      },
+    },
   },
 });
 

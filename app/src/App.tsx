@@ -70,13 +70,14 @@ function App() {
               />
 
               <Stack direction={"row"} justifyContent={"center"} spacing={2}>
-                <Button variant="contained" onClick={handleSearch}>
+                <Button size="large" variant="contained" onClick={handleSearch}>
                   Search
                 </Button>
                 <Button
                   onClick={handleGenerate}
                   variant="contained"
                   color="secondary"
+                  size="large"
                 >
                   Generate
                 </Button>
